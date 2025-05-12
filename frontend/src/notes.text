@@ -1,0 +1,11 @@
+
+#install toastr:
+npm i ngx-toastr
+npm i @angular/animations force
+
+in app.config:
+provideToastr({
+    positionClass: 'toast-bottom-right',
+    timeOut: 4000,
+}),
+

@@ -1,0 +1,37 @@
+﻿
+services:
+  postgres:
+    image: postgres:15
+    container_name: urlshortener_postgres
+    restart: always
+    environment:
+        POSTGRES_DB: UrlShortenerDb
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data  
+
+  redis:
+    image:
+        redis:7
+
+    container_name: urlshortener_redis
+    restart: always
+    ports: 
+     - "6379:6379"
+
+  api:
+    build:
+        context: .
+        dockerfile: DockerFile
+    ports:
+     - "5000:6000"
+    environment: 
+    - ASPNETCORE_ENVIRONMENT=Development
+    - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=UrlShortenerDb;Username=postgres;Password=password
+    - ConnectionStrings__Redis=redis:6379
+    - ASPNETCORE_URLS=http://+:6000
+volumes:
+  postgres-data:

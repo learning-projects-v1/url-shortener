@@ -1,0 +1,74 @@
+# ========================
+# .NET (.NET Core / ASP.NET)
+# ========================
+## Build results
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider, VS Code, VS
+.idea/
+.vscode/
+*.code-workspace
+
+## Logs and others
+*.log
+*.vspscc
+.vs/
+_ReSharper*/
+TestResults/
+*.ncrunch*
+*.VisualState.xml
+
+## NuGet
+*.nupkg
+packages/
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+
+## dotCover
+*.dotCover
+
+# ========================
+# Angular (Node + Angular CLI)
+# ========================
+# Compiled output
+dist/
+tmp/
+out-tsc/
+
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log
+package-lock.json
+.pnpm-debug.log
+yarn.lock
+
+# Angular specific
+.angular/
+.angular-cache/
+
+# Coverage reports
+coverage/
+
+# Environment files
+/src/environments/environment*.ts
+
+# ========================
+# Docker (optional)
+# ========================
+**/*.tar
+*.container
+*.pid
+docker-compose.override.yml

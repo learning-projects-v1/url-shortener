@@ -1,0 +1,10 @@
+﻿  api:
+    build:
+        context: .
+        dockerfile: DockerFile
+    ports:
+     - "5000:6000"
+    environment: 
+    - ASPNETCORE_ENVIRONMENT=Development
+    - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=UrlShortenerDb;Username=postgres;Password=password
+    - ConnectionStrings__Redis=redis:6379
