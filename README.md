@@ -23,8 +23,12 @@ Frontend (Angular)
 - npm install
 - ng serve
 
-TODOs / Future Improvements
- Add unit/integration tests
- Admin analytics page (top shortened URLs)
- Rate limiter backed by Redis
- Auto-expiry of old links
+## TODOs / Future Improvements 
+
+Add unit/integration tests 
+
+Admin analytics page (top shortened URLs) 
+
+Rate limiter backed by Redis 
+
+Auto-expiry of old links 
